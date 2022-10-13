@@ -1,4 +1,5 @@
 def retornaListaString(texto):
+  None
   lista = []
   valor = 0
   texto = texto.split(" ")
