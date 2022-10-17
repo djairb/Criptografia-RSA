@@ -74,32 +74,3 @@ def gerarChavesPublicas(p,q):#nEeEtotieneN
       break
   lista = [n,valorE, totieneN]
   return lista
-
-def gerarD(valorE, totieneN):
-  global ValorD
-  for i in range(10000):
-    #multiplicar x por e
-    numero = i*valorE
-    if numero%totieneN == 1:
-      ValorD = i
-      break
-  return ValorD
-#------- receber umvalor k e definir p e q
-entrada = int(input("Defina o numero de algarismos que terao os primos: "))
-listapq = gerarPeQ(entrada)
-p, q = listapq[0], listapq[1]
-p = 17
-q = 23
-listaPublicas = gerarChavesPublicas(p, q)
-n = listaPublicas[0]
-e = listaPublicas[1]
-totieneN = listaPublicas[2]
-ValorD = gerarD(e, totieneN)
-
-#definicaodeD
-#um numero que multiplicado por E e dividido por TotientedeN apresente resto 1
-
-
-print("\nAs chaves publicas são: n = %i,  e = %i\n" % (n, valorE))
-
-print("As chaves privadas do sistema são: p = %i,  q = %i, d = %i\n" % (p, q, ValorD))
